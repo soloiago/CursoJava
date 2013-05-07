@@ -1,0 +1,194 @@
+body {
+	font-family: sans-serif;
+	margin: 0px;
+	padding: 0px;
+	background: url("../images/fondoRopa.jpg") no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+header {
+	z-index: 999;
+	height: 74px;
+	width: 100%;
+	position: fixed;
+	background: rgba(150, 150, 150, 0.8);
+	border: none;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+header #navigation {
+	width: 900px;
+	margin: auto;
+}
+
+header #navigation #title {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	text-shadow: 0 1px 0 #fff;
+	float: left;
+}
+
+header #navigation #title p{
+	padding: 0;
+	margin: 0;
+}
+
+header ul {
+	list-style: none;
+	float: right;
+}
+
+header li {
+	float: right;
+}
+
+header #userSearch {
+	margin: 0;
+	padding: 0;
+	float: right;
+}
+
+header .option a {
+	width: 200px;
+	color: #000;
+	padding: 20px;
+	text-decoration: none;
+	background: rgba(150, 150, 150, 0);
+}
+
+header a:hover {
+	background-color: #666;
+	-webkit-transition: 1s all ease;
+}
+
+ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+#content #leftPanel {
+	float: left;
+	position: fixed;
+}
+
+#content #rightPanel {
+	position: fixed;
+	margin-left: 775px;
+}
+
+#mainContent li {
+	margin: 0;
+	padding: 0;
+	clear: both;
+	list-style: none;
+}
+
+.votaciones {
+	float: right;
+	border-left: 1px solid black;
+}
+
+.ficha .imagenItem {
+	position: absolute;
+	top: 25px;
+	left: 25px;
+}
+
+#content {
+	padding-top: 73px;
+	width: 900px;
+	margin: 0 auto;
+}
+
+#mainContent {
+	width: 650px;
+	margin-left: 125px;
+	position: relative;
+	float: left;
+}
+
+#lateralLeft {
+	width: 100px;
+	float: left;
+	position: fixed;
+}
+
+#lateralRight {
+	width: 150px;
+	margin: 0 20px;
+	float: right;
+	background-color: #BBB;
+	box-shadow: 0 1px 30px rgba(0, 0, 100, 0.2);
+}
+
+.ficha {
+	position: relative;
+	min-height: 160px;
+	border-top: 1px #AAA solid;
+	padding: 0;
+	margin: 0;
+	background: rgba(250, 250, 250, 0.7);
+}
+
+.ficha .item {
+	padding-top: 25px;
+	margin-left: 140px;
+}
+
+.ficha .item .fecha {
+	float: right;
+}
+
+.ficha .item .precio {
+	position: absolute;
+	top: 25px;
+	right: 150px;
+	width: 131px;
+	height: 67px;
+	text-align: center;
+	background: url("../images/estrella.png") no-repeat center left;
+	z-index: 66;
+}
+
+#itemContent {
+	background: #DDD;
+	width: 650px;
+	margin-left: 125px;
+	position: relative;
+	float: left;	
+}
+
+#itemContent #itemImagen {
+	float: right;
+}
+
+#itemContent #itemImagen #mainImage{
+	width: 300px;
+	min-height: 300px;
+}
+
+#itemContent #itemImagen #extraImage .smallImage{
+	width: 65px;
+	max-height: 75px;
+}
+
+.comentarios {
+	clear: both;
+}
+
+footer {
+	clear: left;
+	width: 100%;
+	background-color: #87CEFA;
+}
+
+img {
+	width: 100px;
+	max-height: 120px;
+}

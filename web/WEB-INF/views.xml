@@ -1,0 +1,47 @@
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+	<definition name="base-layout" template="/WEB-INF/views/layout/layout.jsp">
+		<put-attribute name="title" value="Título principal" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="rightPanel" value="/WEB-INF/views/layout/rightpanel.jsp" />
+	</definition>
+
+	<definition name="lista" extends="base-layout">
+		<put-attribute name="title" value="Vista lista" />
+		<put-attribute name="body" value="/WEB-INF/views/layout/indexlista.jsp" />
+	</definition>
+
+	<definition name="shop" extends="base-layout">
+		<put-attribute name="title" value="Tienda" />
+		<put-attribute name="body" value="/WEB-INF/views/layout/shop.jsp" />
+	</definition>
+
+	<definition name="uploadImage" extends="base-layout">
+		<put-attribute name="body" value="/WEB-INF/views/uploadImage.jsp" />
+		<put-attribute name="title" value="Subir una imagen" />
+	</definition>
+	
+	<definition name="item" extends="base-layout">
+		<put-attribute name="title" value="ITEM" />
+		<put-attribute name="body" value="/WEB-INF/views/layout/item.jsp" />
+	</definition>
+
+	<definition name="user" extends="base-layout">
+		<put-attribute name="body" value="/WEB-INF/views/layout/user.jsp" />
+	</definition>
+
+	<definition name="profile" extends="base-layout">
+		<put-attribute name="body" value="/WEB-INF/views/layout/profile.jsp" />
+	</definition>
+
+	<definition name="fin" extends="base-layout">
+		<put-attribute name="body" value="/WEB-INF/views/layout/fin.jsp" />
+	</definition>
+
+	<definition name="error" extends="base-layout">
+		<put-attribute name="body" value="/WEB-INF/views/layout/error.jsp" />
+	</definition>
+</tiles-definitions>

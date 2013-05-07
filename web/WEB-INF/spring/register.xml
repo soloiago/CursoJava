@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/webflow
+ 		http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
+
+	<var name="userFlow" class="com.iago.springapp.form.UserForm" />
+
+	<view-state id="signup" view="user" model="userFlow">
+		
+
+		<transition on="next" to="profile" validate="true">
+			<!-- Si evaluamos algo y es falso no pasamos al siguiente estado <evaluate 
+				expression="true" /> -->
+		</transition>
+	</view-state>
+
+	<view-state id="profile" view="profile" model="userFlow">
+	    <binder>
+	        <!--  Seleccionamos las propiedades que queremos hacer binding -->
+	    	<binding property="nickname"/>
+	    	<binding property="password"/>
+	    	<binding property="name"/>
+	    	<binding property="surname"/>
+	    	<binding property="email"/>
+	    </binder>
+	    <transition on="next" to="insertUser"></transition>
+	</view-state>
+	
+	<action-state id="insertUser">
+		<evaluate expression="userFlow.insertUser()" />
+		<transition on="success" to="fin" />
+		<transition on="error" to="error" />
+	</action-state>
+	
+	<end-state id="fin" view="fin">
+	</end-state>
+	
+	<end-state id="error" view="error">
+	</end-state>
+
+</flow>

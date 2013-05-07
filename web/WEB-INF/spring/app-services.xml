@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+     http://www.springframework.org/schema/beans             
+     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd         
+     http://www.springframework.org/schema/context
+     http://www.springframework.org/schema/context/spring-context-3.0.xsd          
+     http://www.springframework.org/schema/aop         
+     http://www.springframework.org/schema/aop/spring-aop-3.0.xsd" >
+
+	<bean id="commentDao" class="com.iago.springapp.domain.dao.CommentDao" />
+	<bean id="itemDao" class="com.iago.springapp.domain.dao.ItemDao" />
+	<bean id="userDao" class="com.iago.springapp.domain.dao.UserDao" />
+	<bean id="profileDao" class="com.iago.springapp.domain.dao.ProfileDao" />
+	<bean id="shopDao" class="com.iago.springapp.domain.dao.ShopDao" />
+	<bean id="imageDao" class="com.iago.springapp.domain.dao.ImageDao" />
+
+	<bean id="loginService" class="com.iago.springapp.service.LoginService"
+		scope="session">
+		<!-- this next element effects the proxying of the surrounding bean -->
+		<aop:scoped-proxy />
+	</bean>
+
+</beans>
